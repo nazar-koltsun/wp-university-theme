@@ -1,0 +1,47 @@
+# Ignore core WordPress files
+wp-config.php
+
+# Ignore uploads folder
+wp-content/uploads/
+
+# Ignore theme and plugin cache
+wp-content/plugins/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+
+# Ignore log files
+*.log
+
+# Ignore database backups
+*.sql
+
+# Ignore user-specific files
+*.idea/
+.vscode/
+.DS_Store
+
+# Ignore build files
+/dist/
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore backup files
+*.bak
+
+# Ignore config files
+*.config
+
+# Ignore temporary files
+*.swp
+*.swo
+
+# Ignore environment files
+.env
+
+# Ignore composer dependencies
+/vendor/
+
+# Ignore any other files or directories you want
+# Add them below this line
