@@ -17,14 +17,23 @@
       <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>
 
       <?php
+      $today = date('Y-m-d');
       $recent_events = new WP_Query(array(
         'post_type' => 'event',
         'posts_per_page' => 2,
-        'order' => 'DESC',
+        'meta_key' => 'event_date',
+        'meta_query' => array(
+          'key' => 'event_date',
+          'compare' => '>=',
+          'value' => $today,
+          'type' => 'DATE',
+        ),
+        'orderby' => 'meta_value',
+        'order' => 'ASC',
       ));
 
       while ($recent_events->have_posts()) {
-        $recent_events->the_post()
+        $recent_events->the_post();
       ?>
         <div class="event-summary">
           <a class="event-summary__date t-center" href="<?php the_permalink() ?>">
@@ -47,7 +56,6 @@
         </div>
       <?php }
       wp_reset_postdata() ?>
-
 
       <p class="t-center no-margin">
         <a href="<?php echo get_post_type_archive_link('event') ?>" class="btn btn--blue">View All Events</a>
