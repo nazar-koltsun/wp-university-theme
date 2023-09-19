@@ -47,6 +47,10 @@ get_header();
       'next_text' => __('Next', 'textdomain'),
     )); ?>
   </div>
+  <hr class="section-break">
+  <p>Are you lookin for the past events?
+    <a href="<?php echo site_url('/past-events') ?>">Check out our past vents archive.</a>
+  </p>
 </div>
 
 <?php
