@@ -79,7 +79,7 @@ function university_post_types() {
     'not_found_in_trash' => 'No Profesors found in trash',
   );
 
-  register_post_type('proffesor', array(
+  register_post_type('profesor', array(
     'labels'              =>  $profesorsLabels,
     'menu_icon'           => 'dashicons-welcome-learn-more',
     'show_in_rest'        => true,
