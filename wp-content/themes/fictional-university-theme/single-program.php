@@ -27,7 +27,7 @@
 
   <?php
       $today = date('Y-m-d');
-      $recent_events = new WP_Query(array(
+      $program_events = new WP_Query(array(
         'post_type' => 'event',
         'posts_per_page' => 2,
         'meta_key' => 'event_date',
@@ -48,8 +48,13 @@
         'order' => 'ASC',
       ));
 
-      while ($recent_events->have_posts()) {
-        $recent_events->the_post();
+      if($program_events->have_posts()) {
+        echo '<hr class="section-break">';
+        echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' Events</h2>';
+      }
+
+      while ($program_events->have_posts()) {
+        $program_events->the_post();
       ?>
         <div class="event-summary">
           <a class="event-summary__date t-center" href="<?php the_permalink() ?>">
