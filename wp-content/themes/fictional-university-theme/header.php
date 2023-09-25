@@ -29,7 +29,7 @@
             </li>
             <li 
               <?php
-                if (get_post_type() === 'program' or is_page('programs')) echo "class=current-menu-item" ?>>
+                if (get_post_type() === 'program') echo "class=current-menu-item" ?>>
               <a href="<?php echo get_post_type_archive_link('program') ?>">Programs</a>
             </li>
             <li <?php
