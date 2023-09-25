@@ -62,6 +62,33 @@ function university_post_types() {
     'menu_position'       => 6, // Position in the admin menu
     'supports'            => array('title', 'editor'),
   ));
+
+  // Profesor Post Type
+  $profesorsLabels = array(
+    'name'               => 'Profesors',
+    'singular_name'      => 'Profesors',
+    'menu_name'          => 'Profesors',
+    'add_new'            => 'Add Profesor',
+    'add_new_item'       => 'Add New Profesor',
+    'edit_item'          => 'Edit Profesor',
+    'new_item'           => 'New Profesor',
+    'view_item'          => 'View Profesor',
+    'search_items'       => 'Search Profesors',
+    'not_found'          => 'No Profesors found',
+    'all_items'          => 'All Profesors',
+    'not_found_in_trash' => 'No Profesors found in trash',
+  );
+
+  register_post_type('proffesor', array(
+    'labels'              =>  $profesorsLabels,
+    'menu_icon'           => 'dashicons-welcome-learn-more',
+    'show_in_rest'        => true,
+    'public'              => true,
+    'publicly_queryable'  => true,
+    'query_var'           => true,
+    'menu_position'       => 7, // Position in the admin menu
+    'supports'            => array('title', 'editor'),
+  ));
 }
 
 add_action('init', 'university_post_types');
