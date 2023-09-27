@@ -87,10 +87,8 @@ function university_post_types() {
     'publicly_queryable'  => true,
     'query_var'           => true,
     'menu_position'       => 7, // Position in the admin menu
-    'supports'            => array('title', 'editor'),
+    'supports'            => array('title', 'editor', 'thumbnail'),
   ));
 }
 
 add_action('init', 'university_post_types');
-
-?>
