@@ -1,21 +1,11 @@
-<?php get_header();
-  $backgroundImg = get_field('page_banner_image')['sizes']['pageBanner'];
+<?php
+get_header();
 
-  $bannerBackgroundImage = $backgroundImg ? $backgroundImg : get_theme_file_uri('/images/ocean.jpg');
+$page_title = get_the_title();
+$page_subtitle = get_field('page_banner_subtitle');
 ?>
 
-<div class="page-banner">
-  <div class="page-banner__bg-image" style="
-    background-image: url(<?php echo $bannerBackgroundImage ?>);
-  ">
-  </div>
-  <div class="page-banner__content container container--narrow">
-    <h1 class="page-banner__title"><?php the_title(); ?></h1>
-    <div class="page-banner__intro">
-      <p><?php echo the_field('page_banner_subtitle') ?></p>
-    </div>
-  </div>
-</div>
+<?php include 'page-banner.php' ?>
 
 <div class="container container--narrow page-section">
   <div class="generic-content">
