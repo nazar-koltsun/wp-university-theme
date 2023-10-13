@@ -3,9 +3,10 @@ get_header();
 
 $page_title = 'All programs';
 $page_subtitle = 'There is something for everyone. Have a look around.';
+
+include 'page-banner.php';
 ?>
 
-<?php include 'page-banner.php' ?>
 
 <div class="container container--narrow page-section">
   <ul class="link-list min-list">

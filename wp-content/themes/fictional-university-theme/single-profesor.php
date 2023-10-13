@@ -3,9 +3,10 @@ get_header();
 
 $page_title = get_the_title();
 $page_subtitle = get_field('page_banner_subtitle');
+
+include 'page-banner.php';
 ?>
 
-<?php include 'page-banner.php' ?>
 
 <div class="container container--narrow page-section">
   <div class="generic-content">

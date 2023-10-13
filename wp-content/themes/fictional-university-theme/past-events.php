@@ -4,11 +4,11 @@ Template Name: Past Events Template
 */
 get_header();
 
-$page_title = get_the_title() ;
+$page_title = get_the_title();
 $page_subtitle = 'A recap of our past event';
+include 'page-banner.php'
 ?>
 
-<?php include 'page-banner.php' ?>
 
 <div class="container container--narrow page-section">
   <?php

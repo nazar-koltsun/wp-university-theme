@@ -3,9 +3,10 @@ get_header();
 
 $page_title = 'All events';
 $page_subtitle = 'Se what is going in all world.';
+
+include 'page-banner.php';
 ?>
 
-<?php include 'page-banner.php' ?>
 
 <div class="container container--narrow page-section">
   <?php

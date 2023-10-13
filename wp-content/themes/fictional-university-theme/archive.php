@@ -3,9 +3,10 @@ get_header();
 
 $page_title = get_the_archive_title();
 $page_subtitle = get_the_archive_description();
+
+include 'page-banner.php';
 ?>
 
-<?php include 'page-banner.php' ?>
 
 <div class="container container--narrow page-section">
   <?php

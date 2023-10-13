@@ -1,11 +1,12 @@
-<?php 
-  get_header(); 
+<?php
+get_header();
 
-  $page_title = get_the_title();
-  $page_subtitle = get_field('page_banner_subtitle');
+$page_title = get_the_title();
+$page_subtitle = get_field('page_banner_subtitle');
+
+include 'page-banner.php';
 ?>
 
-<?php include 'page-banner.php' ?>
 
 <div class="container container--narrow page-section">
   <div class="metabox metabox--position-up metabox--with-home-link">
