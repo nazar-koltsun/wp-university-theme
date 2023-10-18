@@ -22,8 +22,6 @@ wp-content/backup-db/
 .DS_Store
 
 # Ignore build files
-/dist/
-/node_modules/
 npm-debug.log
 yarn-error.log
 
@@ -45,3 +43,5 @@ yarn-error.log
 
 # Ignore any other files or directories you want
 # Add them below this line
+wp-content/themes/*/build/*
+wp-content/themes/*/node_modules/
