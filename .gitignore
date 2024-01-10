@@ -1,47 +1,25 @@
-# Ignore core WordPress files
+# Ignore core WordPress directories
+wp-admin/
+wp-includes/
+
+# Ignore WordPress configuration file
 wp-config.php
 
-# Ignore uploads folder
+# Ignore the uploads directory
 wp-content/uploads/
 
-# Ignore theme and plugin cache
-wp-content/plugins/
+# Ignore themes and plugins you don't want to track
+wp-content/themes/*
+wp-content/plugins/*
+
+# Ignore specific files
 wp-content/cache/
 wp-content/upgrade/
-wp-content/backup-db/
+wp-content/backup-*/
 
-# Ignore log files
+# Ignore other common files and directories
+node_modules/
+vendor/
 *.log
-
-# Ignore database backups
-*.sql
-
-# Ignore user-specific files
-*.idea/
-.vscode/
-.DS_Store
-
-# Ignore build files
-npm-debug.log
-yarn-error.log
-
-# Ignore backup files
 *.bak
-
-# Ignore config files
-*.config
-
-# Ignore temporary files
-*.swp
-*.swo
-
-# Ignore environment files
-.env
-
-# Ignore composer dependencies
-/vendor/
-
-# Ignore any other files or directories you want
-# Add them below this line
-wp-content/themes/*/build/*
-wp-content/themes/*/node_modules/
+*.sql
