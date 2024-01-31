@@ -7,7 +7,6 @@ $page_subtitle = get_field('page_banner_subtitle');
 include 'page-banner.php';
 ?>
 
-
 <div class="container container--narrow page-section">
   <div class="metabox metabox--position-up metabox--with-home-link">
     <p>
